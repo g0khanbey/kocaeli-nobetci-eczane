@@ -1,0 +1,315 @@
+/* Genel Stiller */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Ana Container */
+  .eczane-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e6f7ee, #ffffff);
+    padding: 20px;
+  }
+  
+  /* Header */
+  .eczane-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .eczane-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #16a34a;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  
+  .eczane-logo span {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .eczane-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #166534;
+    margin-bottom: 8px;
+  }
+  
+  .eczane-header p {
+    color: #666;
+    max-width: 400px;
+  }
+  
+  /* Arama Bölümü */
+  .eczane-search {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 0 auto 32px;
+    max-width: 600px;
+  }
+  
+  .eczane-search-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .eczane-search-inner {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  .eczane-select {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .eczane-select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+  }
+  
+  .eczane-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .eczane-button {
+      width: auto;
+    }
+  }
+  
+  .eczane-button:hover {
+    background-color: #15803d;
+  }
+  
+  .eczane-button:disabled {
+    background-color: #86efac;
+    cursor: not-allowed;
+  }
+  
+  /* Spinner */
+  .eczane-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+  }
+  
+  .eczane-spinner-large {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(22, 163, 74, 0.3);
+    border-radius: 50%;
+    border-top-color: #16a34a;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 12px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hata Mesajı */
+  .eczane-error {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 0 auto 24px;
+    max-width: 600px;
+  }
+  
+  .eczane-error span {
+    margin-right: 12px;
+  }
+  
+  .eczane-error p {
+    color: #b91c1c;
+    font-size: 14px;
+  }
+  
+  /* Yükleme Durumu */
+  .eczane-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+  }
+  
+  .eczane-loading span {
+    font-size: 18px;
+    color: #16a34a;
+  }
+  
+  /* Eczane Kartları Grid */
+  .eczane-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  
+  @media (min-width: 768px) {
+    .eczane-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .eczane-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Eczane Kartı */
+  .eczane-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e6f7ee;
+    background-color: white;
+    transition: box-shadow 0.3s;
+  }
+  
+  .eczane-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eczane-card-header {
+    background-color: #16a34a;
+    color: white;
+    padding: 16px;
+  }
+  
+  .eczane-card-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .eczane-card-content {
+    padding: 0;
+  }
+  
+  .eczane-map {
+    border: none;
+  }
+  
+  .eczane-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .eczane-info-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .eczane-icon {
+    margin-right: 8px;
+    color: #16a34a;
+    flex-shrink: 0;
+  }
+  
+  .eczane-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .eczane-link:hover {
+    color: #16a34a;
+    text-decoration: underline;
+  }
+  
+  /* Boş Durum */
+  .eczane-empty {
+    text-align: center;
+    padding: 48px 0;
+  }
+  
+  .eczane-empty-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #e6f7ee;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  
+  .eczane-empty-icon span {
+    font-size: 24px;
+  }
+  
+  .eczane-empty h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .eczane-empty p {
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  .eczane-footer {
+    margin-top: 64px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding: 16px 0;
+  }
+  
