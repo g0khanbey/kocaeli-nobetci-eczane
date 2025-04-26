@@ -30,17 +30,17 @@ Bu proje, **Kocaeli** bölgesindeki **nöbetçi eczaneleri** hızlı ve kolay bi
 git clone https://github.com/kullaniciadiniz/kocaeli-nobetci-eczane.git
 ```
 
-### 2. Proje klasörüne girin
+### 2. Proje klasörüne giriniz
 ```bash
 cd kocaeli-nobetci-eczane
 ```
 
-### 3. Gerekli paketleri yükleyin
+### 3. Gerekli paketleri yükleyiniz
 ```bash
 npm install
 ```
 
-### 4. Projeyi başlatın
+### 4. Projeyi başlatınız
 ```bash
 npm run dev
 ```
