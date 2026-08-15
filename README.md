@@ -27,7 +27,7 @@ Bu proje, **Kocaeli** bölgesindeki **nöbetçi eczaneleri** hızlı ve kolay bi
 
 ### 1. Repoyu klonlayın
 ```bash
-git clone https://github.com/kullaniciadiniz/kocaeli-nobetci-eczane.git
+git clone https://github.com/g0khanbey/kocaeli-nobetci-eczane.git
 ```
 
 ### 2. Proje klasörüne giriniz
@@ -48,7 +48,7 @@ npm run dev
 > Proje, genellikle `http://localhost:3000` adresinde çalışır.
 
 > **Not:** Backend tarafındaki `eczane.php` dosyasının çalışır bir sunucuda olması gerekir.  
-> API URL'si: `http://185.136.206.170/api/eczane.php`
+> API URL'si: ` `
 
 <br/>
 
