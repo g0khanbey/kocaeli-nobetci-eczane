@@ -14,7 +14,7 @@ function temizle($text) {
 
 function getNobetciEczaneler($semt) {
     $semtUrl = temizle($semt);
-    $url = "https://www.eczaneler.gen.tr/nobetci-kocaeli-" . $semtUrl;
+    $url = "https://www.eczaneler.gen.tr/nobetci-kocaeli" . $semtUrl;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
